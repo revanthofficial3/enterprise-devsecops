@@ -1,0 +1,24 @@
+---
+- name: Verify container runtime
+  hosts: k8s_master:k8s_worker
+  become: true
+
+  tasks:
+
+    - name: Check containerd version
+      command: containerd --version
+      register: containerd_version
+      changed_when: false
+
+    - name: Show containerd version
+      debug:
+        msg: "{{ containerd_version.stdout }}"
+
+    - name: Check containerd service
+      command: systemctl is-active containerd
+      register: containerd_status
+      changed_when: false
+
+    - name: Show containerd status
+      debug:
+        msg: "Containerd status: {{ containerd_status.stdout }}"

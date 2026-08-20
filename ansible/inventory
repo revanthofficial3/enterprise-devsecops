@@ -1,0 +1,8 @@
+[devsecops]
+devsecops-server ansible_host=172.31.4.65
+
+[k8s_master]
+k8s-master ansible_host=172.31.10.216
+
+[k8s_worker]
+k8s-worker ansible_host=172.31.5.242

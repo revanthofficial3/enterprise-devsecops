@@ -5,3 +5,9 @@ target/
 *.class
 *.war
 *.jar
+
+# Terraform
+.terraform/
+terraform.tfstate
+terraform.tfstate.*
+*.tfplan

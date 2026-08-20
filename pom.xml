@@ -31,6 +31,16 @@
 
     <build>
 
+        <!-- Java source location -->
+        <sourceDirectory>app/src/main/java</sourceDirectory>
+
+        <!-- Resources location -->
+        <resources>
+            <resource>
+                <directory>app/src/main/resources</directory>
+            </resource>
+        </resources>
+
         <finalName>enterprise-devsecops</finalName>
 
         <plugins>
@@ -45,11 +55,29 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.4.0</version>
+                <configuration>
+                    <!-- JSP/Web files location -->
+                    <warSourceDirectory>app/src/main/webapp</warSourceDirectory>
+
+                    <!-- Don't fail if WEB-INF/web.xml is absent -->
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
             </plugin>
 
         </plugins>
 
     </build>
+<<<<<<< HEAD
+
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>Nexus Releases</name>
+            <url>http://32.197.201.170:8081/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
+
+=======
 <distributionManagement>
     <repository>
         <id>nexus</id>
@@ -57,4 +85,5 @@
         <url>http://32.197.201.170:8081/repository/maven-releases/</url>
     </repository>
 </distributionManagement>
+>>>>>>> refs/remotes/origin/main
 </project>
