@@ -67,7 +67,6 @@
         </plugins>
 
     </build>
-<<<<<<< HEAD
 
     <distributionManagement>
         <repository>
@@ -76,14 +75,4 @@
             <url>http://32.197.201.170:8081/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
-
-=======
-<distributionManagement>
-    <repository>
-        <id>nexus</id>
-        <name>Nexus Releases</name>
-        <url>http://32.197.201.170:8081/repository/maven-releases/</url>
-    </repository>
-</distributionManagement>
->>>>>>> refs/remotes/origin/main
 </project>
